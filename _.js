@@ -27,5 +27,13 @@ const _ = {
       let paddedString = ' '.repeat(startPaddingLength).concat(string, ' '.repeat(endPaddingLength))
       return paddedString
     },
+    has(object, key){
+      if(key === undefined){
+  	    return false
+  	  }
+ 	  let hasValue = Object.keys(object);
+   	  return hasValue.includes(key)
+    },
+    
   }
   
