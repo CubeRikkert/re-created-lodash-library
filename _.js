@@ -61,7 +61,16 @@ const _ = {
       }
       let droppedArray = array.slice(n)
       return droppedArray
-    }
+    },
+	dropWhile(array, predicate) {
+      let firstFalseyIndex
+      for (let i=array.length; i> -1; i--) {
+        if (!predicate(array[i], i)) {
+          firstFalseyIndex = i
+        }
+      }
+      return array.slice(firstFalseyIndex)
+    },
 
   }
   
