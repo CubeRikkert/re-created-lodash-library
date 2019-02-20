@@ -34,6 +34,16 @@ const _ = {
  	  let hasValue = Object.keys(object);
    	  return hasValue.includes(key)
     },
-    
+    invert(object) {
+      let invertedObject = {}
+      let keys = Object.keys(object)
+      for (let i=0; i<keys.length; i++) {
+        let key = keys[i]
+        let value = object[key]
+        invertedObject[value] = key
+      }
+      return invertedObject    
+    }
+
   }
   
