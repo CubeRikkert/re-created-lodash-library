@@ -71,6 +71,16 @@ const _ = {
       }
       return array.slice(firstFalseyIndex)
     },
-
+    chunk(array, size){
+        if(size === undefined){
+          size = 1
+        }
+        let arrayInChunks = []
+        for(let i = 0; i < array.length; i=i+size){
+          let arrayChunk = array.slice(i, i+size)
+          arrayInChunks.push(arrayChunk);
+        }
+      return arrayInChunks
+      },
   }
   
